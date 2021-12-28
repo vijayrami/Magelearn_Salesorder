@@ -42,8 +42,8 @@
         $imageId = 'product_base_image';
 		$width = 200;
 		$height = 300;
-		$id = $_item->getId();
-		$_product = $block->getProductById($id);
+		$sku = $_item->getSku();
+		$_product = $block->getProductBySku($sku);
 		$resizedImageUrl = $block->resizeImage($_product, 'product_base_image', $width, $height)->getUrl();
         ?>
         <img src="<?php echo $resizedImageUrl;?>" alt="" />
